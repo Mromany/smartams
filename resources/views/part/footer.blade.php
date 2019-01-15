@@ -1,0 +1,10 @@
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+@include('js.js')
+@yield('alljs')
+</body>
+</html>
