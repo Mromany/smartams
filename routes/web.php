@@ -15,3 +15,8 @@ Route::get('edit/{ID}', 'EditorController@edit');
 
 Route::post('question', 'QuestionController@add');
 //Show all video
+
+Route::get('videoshow' , function()
+{
+    return view('main.videoshow');
+});
