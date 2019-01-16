@@ -8,6 +8,17 @@
 <script src="{{asset('plugins/sweetalert/js/sweetalert.min.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+<script>
+    var countc = 0;
+    var count = 1;
+    $("#plus").click(function()
+    {
+        $("#ST"+countc).clone().attr("id","ST"+count).attr("value","").insertAfter("#ST"+countc);
+        $("#ST"+countc).val(document.getElementById('vda').currentTime);
+        countc = count;
+        count++;
+    });
+</script>
 <script type="text/javascript">
     // Collapse menu
     (function() {
@@ -58,6 +69,8 @@
         else
             this.pause();
     });
+
+
 </script>
 
 @endsection

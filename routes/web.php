@@ -13,5 +13,8 @@ Route::post('upload', 'VideoController@upload');
 //Show edit video page
 Route::get('edit/{ID}', 'EditorController@edit');
 
-Route::post('question', 'QuestionController@add');
 //Show all video
+Route::post('question', 'QuestionController@add');
+
+//Show all video
+Route::post('Spottime', 'VideoController@addspot');

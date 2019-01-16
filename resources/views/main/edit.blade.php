@@ -19,7 +19,47 @@
                             <div class="tab-content" id="v-pills-tabContent">
                                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                      aria-labelledby="v-pills-home-tab">
-                                    <form action="{{url('question')}}" method="post" class="form-horizontal custm-form" role="form" enctype="multipart/form-data">
+                                    <div class="form-group">
+
+                                        <form action="{{url('Spottime')}}" method="post"
+                                              class="form-horizontal custm-form" role="form"
+                                              enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="row">
+                                                <div style="width: 70%" >
+                                                    <input id="ST0" type="text" class="form-control" style="width: 100%;margin-bottom: 10px"  name="sp[]" placeholder="Time"/>
+                                                </div>
+                                                <div style="width: 29%">
+                                                   <a id="plus"  class="btn  btn-outline-warning ">+</a>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <br/>
+                                            <input type="submit" value="Save" class="btn btn-warning "/>
+                                            <input name="videos"  type="text" value="{{$ID}}"  hidden/>
+                                        </form>
+
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                     aria-labelledby="v-pills-profile-tab">
+                                    <p class="mb-0">
+                                        @foreach($ClUF as $ClUFs)
+                                        <input type="text" value="{{$ClUFs}}" class="btn btn-warning "/>
+                                        @endforeach
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                     aria-labelledby="v-pills-messages-tab">
+                                    <p class="mb-0">
+                                        3
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                     aria-labelledby="v-pills-settings-tab">
+                                    <p class="mb-0">
+                                    <form action="{{url('question')}}" method="post" class="form-horizontal custm-form"
+                                          role="form" enctype="multipart/form-data">
                                         @csrf
                                         <input type="text" class="form-control" style="width: 100%" name="question"
                                                placeholder="question"/> <br/><br/>
@@ -38,25 +78,8 @@
                                         <input type="text" class="form-control" id="Time" placeholder="Time"/><br/><br/>
                                         <input type="text" name="type" value="1" hidden/>
 
-                                        <input type="submit" value="add" />
+                                        <input type="submit" value="add"/>
                                     </form>
-                                </div>
-                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                     aria-labelledby="v-pills-profile-tab">
-                                    <p class="mb-0">
-                                        2
-                                    </p>
-                                </div>
-                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                     aria-labelledby="v-pills-messages-tab">
-                                    <p class="mb-0">
-                                        3
-                                    </p>
-                                </div>
-                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                                     aria-labelledby="v-pills-settings-tab">
-                                    <p class="mb-0">
-                                        4
                                     </p>
                                 </div>
                             </div>
@@ -92,9 +115,9 @@
 <script type="text/javascript">
     var vid = document.getElementById('vda');
     var avd = document.getElementById('Time');
-    window.setInterval(function ()
-    {
-        avd.value = vid.currentTime;/*.toString().split('.')[0]*/
+    window.setInterval(function () {
+        avd.value = vid.currentTime;
+        /*.toString().split('.')[0]*/
     }, 100);
 </script>
 <!-- [ sample-page ] end -->
