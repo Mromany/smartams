@@ -18,3 +18,8 @@ Route::post('question', 'QuestionController@add');
 
 //Show all video
 Route::post('Spottime', 'VideoController@addspot');
+
+Route::get('videoshow' , function()
+{
+    return view('main.videoshow');
+});

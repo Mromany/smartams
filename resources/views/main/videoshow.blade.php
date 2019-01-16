@@ -4,11 +4,10 @@
 
 <!-- [ sample-page ] start -->
 <div class="row">
-@foreach($GAMS as $GAMSs)
 <div class="col-md-4 col-xl-4">
     <div class="card">
         <div class="card-header">
-            <h5>{{$GAMSs->Title}}</h5>
+            <h5>asd</h5>
             <div class="card-header-right">
                 <div class="btn-group card-option">
                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -27,7 +26,7 @@
                 <div style="position: relative;" class="amcharts-main-div">
                     <div>
                         <video id="vd"  style="width: 450px;height: 400px"> <!-- autoplay -->
-                            <source src="{{asset('http://localhost/smartams/public/video').'/'.$GAMSs->Path}}" type="video/mp4">
+                            <source src="{{asset('http://localhost/smartams/public/video').'/'}}" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -36,7 +35,6 @@
     </div>
 </div>
 
-@endforeach
 </div>
 <!-- [ sample-page ] end -->
 @include('part.footer')
