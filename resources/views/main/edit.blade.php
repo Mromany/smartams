@@ -43,11 +43,16 @@
                                 </div>
                                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                                      aria-labelledby="v-pills-profile-tab">
-                                    <p class="mb-0">
+                                    <div class="mb-0">
+                                        <div class="row">
                                         @foreach($ClUF as $ClUFs)
-                                        <input type="text" value="{{$ClUFs}}" class="btn btn-warning "/>
+                                        <div style="width: 25%;margin: 4px">
+                                            <input onclick="movvide({{$ClUFs}})" type="button" value="{{$ClUFs}}" class="btn btn-warning" style="width: 100%;" />
+                                        </div>
                                         @endforeach
-                                    </p>
+                                        </div>
+                                        <input onclick="Tables()"  type="button" class="btn  btn-outline-warning " value="ADD ROW" />
+                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                                      aria-labelledby="v-pills-messages-tab">
@@ -103,22 +108,46 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+            <a class="boxs" href=""></a>
+
         </div>
-        <div class="col-md-5 col-xl-5">
-            <video class="card-block" id="vda" style="width: 450px;height: 400px" controls="">
-                <source src="{{asset('http://localhost/smartams/public/video')}}/{{$ID}} " type="video/mp4">
-            </video>
+        <div id="mma" class="col-md-5 col-xl-5">
+            <div id="video_box">
+                <div id="video_overlays">
+                    <table id="cpanels" border="1" width="100%" style="height:400px">
+
+                    </table>
+                </div>
+               <div>
+                   <video class="card-block"  id="vd" style="width: 450px;height: 400px;" controls="">
+                       <source src="{{asset('http://localhost/smartams/public/video')}}/{{$ID}} " type="video/mp4">
+                   </video>
+               </div>
+            </div>
         </div>
     </div>
 </div>
 <script type="text/javascript">
-    var vid = document.getElementById('vda');
-    var avd = document.getElementById('Time');
-    window.setInterval(function () {
-        avd.value = vid.currentTime;
-        /*.toString().split('.')[0]*/
-    }, 100);
+
+    var i =1;
+    function Tables()
+    {
+        $('#cpanels').append('<tr>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '<td width="10%">'+(i++)+'</td>' +
+            '</tr>');
+    }
+
 </script>
 <!-- [ sample-page ] end -->
 @include('part.footer')

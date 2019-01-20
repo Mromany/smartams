@@ -9,13 +9,12 @@
 <link rel="stylesheet" href="{{asset('plugins/animation/css/animate.min.css')}}">
 <!-- vendor css -->
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
-<!-- rtl layouts -->
-<!--<link rel="stylesheet" href="{{asset('css/layouts/rtl.css')}}">-->
-<!-- data tables css -->
+
 <link rel="stylesheet" href="{{asset('plugins/data-tables/css/datatables.min.css')}}">
 <!-- materialdesignicons css -->
 <link rel="stylesheet" href="{{asset('fonts/material/css/materialdesignicons.min.css')}}">
 <style>
+
     .tab-content {
     padding: 35px 30px;
     margin-top: 15px;
@@ -25,5 +24,17 @@
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
     border-radius: 5px;
 }
+
+    #video_box{
+        float:left;
+    }
+    #video_overlays {
+        position:absolute;
+        float:left;
+        width:450px;
+        min-height:400px;
+        background-color:#0000;
+        z-index:1;
+    }
 </style>
 @endsection

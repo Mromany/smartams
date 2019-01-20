@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use App\Spottime;
 use App\Video;
 use Illuminate\Http\Request;
@@ -11,7 +12,9 @@ class VideoController extends Controller
     public function show()
     {
         $GAMS = Video::get();
-        return view('main.welcome', compact('GAMS'));
+        $GAMS_Events = Event::get();
+        $GAMS_Sp = Spottime::get();
+        return view('main.welcome', compact('GAMS' , 'GAMS_Events' , 'GAMS_Sp'));
     }
 
     public function upload(Request $request)
