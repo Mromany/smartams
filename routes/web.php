@@ -19,6 +19,10 @@ Route::post('question', 'QuestionController@add');
 //Show all video
 Route::post('Spottime', 'VideoController@addspot');
 
+//Add Question DD
+Route::get('Qdd', 'QuestionController@DragnDrop');
+
+
 Route::get('videoshow' , function()
 {
     return view('main.videoshow');

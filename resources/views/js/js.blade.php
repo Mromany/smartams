@@ -4,7 +4,8 @@
 <script src="{{asset('js/horizontal-menu.js')}}"></script>
 <script src="{{asset('plugins/sweetalert/js/sweetalert.min.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     $("#vd").prop("controls", false);
     var countc = 0;
@@ -16,6 +17,27 @@
         count++;
     });
 </script>
+<script>
+
+
+    $(function () {
+        $("#draggable").draggable();
+        $("#droppable").droppable({
+            drop: function (event, ui) {
+                setInterval(function () {
+                    var i = (Math.floor(Math.random() * 1000) + 1) % 1100;
+                    var x = (Math.floor(Math.random() * 1000) + 1) % 700;
+                    ui.draggable.css("left" , i);
+                    ui.draggable.css("top" , x);
+                }, 1000);
+
+
+
+            }
+        });
+    });
+    f
+</script>
 <script type="text/javascript">
     $("#vd").click(function () {
         if (this.paused)
@@ -23,8 +45,8 @@
         else
             this.pause();
     });
-    function movvide(currentTimea)
-    {
+
+    function movvide(currentTimea) {
         var vid = document.getElementById("vd");
         vid.currentTime = currentTimea;
     }
