@@ -21,7 +21,9 @@
 
 
     $(function () {
-        $("#draggable").draggable();
+        $("#draggable1").draggable();
+        $("#draggable2").draggable();
+        $("#draggable3").draggable();
         $("#droppable").droppable({
             drop: function (event, ui) {
                 setInterval(function () {

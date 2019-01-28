@@ -19,13 +19,34 @@
                             <div class="tab-content" id="v-pills-tabContent">
                                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                      aria-labelledby="v-pills-home-tab" style="height: 650px">
-                                    <div id="droppable"style="color: #1b4b72;border: solid green;padding: 25px;width: 100px; height: 80px">
+                                    {{-- <div id="droppable"style="color: #1b4b72;border: solid green;padding: 25px;width: 100px; height: 80px">
                                         <p >Drop here</p>
+                                    </div> --}}
+                                    <div class="row" style="margin-bottom: 2rem;">
+                                        <div class="col-lg-2 col-md-2" id="droppable"style="color: #1b4b72;border: solid green;padding: 25px;height: 80px">
+                                            <p >Drop here</p>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2" id="droppable"style="color: #1b4b72;border: solid green;padding: 25px;height: 80px">
+                                            <p >Drop here</p>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2" id="droppable"style="color: #1b4b72;border: solid green;padding: 25px;height: 80px">
+                                            <p >Drop here</p>
+                                        </div>
                                     </div>
-
-                                    <div id="draggable"style="color: #1b4b72;border: solid red;padding: 25px;width: 100px; height: 80px">
+                                    <div class="row" style="margin-top: 2rem;">
+                                        <div class="col-lg-2 col-md-2" id="draggable1"style="color: #1b4b72;border: solid red;padding: 25px;margin: 10px; height: 80px">
+                                            <p>a</p>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2" id="draggable2"style="color: #1b4b72;border: solid red;padding: 25px;margin: 10px; height: 80px">
+                                            <p>a</p>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2" id="draggable3"style="color: #1b4b72;border: solid red;padding: 25px;margin: 10px; height: 80px">
+                                            <p>a</p>
+                                        </div>
+                                    </div>
+                                    {{-- <div id="draggable"style="color: #1b4b72;border: solid red;padding: 25px;width: 100px; height: 80px">
                                         <p>a</p>
-                                    </div>
+                                    </div> --}}
 
 
                                 </div>
