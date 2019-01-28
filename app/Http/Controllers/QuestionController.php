@@ -26,4 +26,9 @@ class QuestionController extends Controller
         }
         return redirect()->back();
     }
+    public function DragnDrop()
+    {
+        return view('main.ddq');
+    }
+
 }

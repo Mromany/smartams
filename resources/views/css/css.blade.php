@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="{{asset('plugins/data-tables/css/datatables.min.css')}}">
 <!-- materialdesignicons css -->
 <link rel="stylesheet" href="{{asset('fonts/material/css/materialdesignicons.min.css')}}">
+
+<style>
+    #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+    #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+</style>
+
 <style>
 
     .tab-content {
