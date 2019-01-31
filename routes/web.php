@@ -23,7 +23,6 @@ Route::post('Spottime', 'VideoController@addspot');
 Route::get('Qdd', 'QuestionController@DragnDrop');
 
 
-Route::get('videoshow' , function()
-{
+Route::get('videoshow', function () {
     return view('main.videoshow');
 });
