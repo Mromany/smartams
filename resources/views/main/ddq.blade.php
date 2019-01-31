@@ -23,25 +23,25 @@
                                         <p >Drop here</p>
                                     </div> --}}
                                     <div class="row" style="margin-bottom: 2rem;">
-                                        <div class="col-lg-2 col-md-2" id="droppable"style="color: #1b4b72;border: solid green;padding: 25px;height: 80px">
-                                            <p >Drop here</p>
+                                        <div class="col-lg-2 col-md-2" id="droppable1"style="color: #1b4b72;border: solid green;padding: 25px;height: 80px;margin: 10px;">
+                                            <p>Plant</p>
                                         </div>
-                                        <div class="col-lg-2 col-md-2" id="droppable"style="color: #1b4b72;border: solid green;padding: 25px;height: 80px">
-                                            <p >Drop here</p>
+                                        <div class="col-lg-2 col-md-2" id="droppable2"style="color: #1b4b72;border: solid green;padding: 25px;height: 80px;margin: 10px;">
+                                            <p>Plastic</p>
                                         </div>
-                                        <div class="col-lg-2 col-md-2" id="droppable"style="color: #1b4b72;border: solid green;padding: 25px;height: 80px">
-                                            <p >Drop here</p>
+                                        <div class="col-lg-2 col-md-2" id="droppable3"style="color: #1b4b72;border: solid green;padding: 25px;height: 80px; margin: 10px;">
+                                            <p>metals</p>
                                         </div>
                                     </div>
                                     <div class="row" style="margin-top: 2rem;">
                                         <div class="col-lg-2 col-md-2" id="draggable1"style="color: #1b4b72;border: solid red;padding: 25px;margin: 10px; height: 80px">
-                                            <p>a</p>
+                                            <p>ball</p>
                                         </div>
                                         <div class="col-lg-2 col-md-2" id="draggable2"style="color: #1b4b72;border: solid red;padding: 25px;margin: 10px; height: 80px">
-                                            <p>a</p>
+                                            <p>Apple</p>
                                         </div>
                                         <div class="col-lg-2 col-md-2" id="draggable3"style="color: #1b4b72;border: solid red;padding: 25px;margin: 10px; height: 80px">
-                                            <p>a</p>
+                                            <p>Iron</p>
                                         </div>
                                     </div>
                                     {{-- <div id="draggable"style="color: #1b4b72;border: solid red;padding: 25px;width: 100px; height: 80px">

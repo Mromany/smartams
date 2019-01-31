@@ -18,27 +18,48 @@
     });
 </script>
 <script>
-
-
     $(function () {
         $("#draggable1").draggable();
         $("#draggable2").draggable();
         $("#draggable3").draggable();
-        $("#droppable").droppable({
-            drop: function (event, ui) {
-                setInterval(function () {
-                    var i = (Math.floor(Math.random() * 1000) + 1) % 1100;
-                    var x = (Math.floor(Math.random() * 1000) + 1) % 700;
-                    ui.draggable.css("left" , i);
-                    ui.draggable.css("top" , x);
-                }, 1000);
 
-
-
+        $("#droppable1").droppable({//plant
+            drop: function (event, ui)
+            {
+                if(ui.draggable.attr('id') == 'draggable2')
+                {
+                    $(this).find("p").html('Yes');
+                }
+                else {
+                    $(this).find("p").html('NO');
+                }
+            }
+        });
+        $("#droppable2").droppable({//plastic
+            drop: function (event, ui)
+            {
+                if(ui.draggable.attr('id') == 'draggable1')
+                {
+                    $(this).find("p").html('Yes');
+                }
+                else {
+                    $(this).find("p").html('NO');
+                }
+            }
+        });
+        $("#droppable3").droppable({//metal
+            drop: function (event, ui)
+            {
+                if(ui.draggable.attr('id') == 'draggable3')
+                {
+                    $(this).find("p").html('Yes');
+                }
+                else {
+                    $(this).find("p").html('NO');
+                }
             }
         });
     });
-    f
 </script>
 <script type="text/javascript">
     $("#vd").click(function () {
